@@ -1,0 +1,236 @@
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* BODY */
+
+body{
+    background: linear-gradient(135deg, #0b0215, #1d0633);
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* FONDO ANIMADO */
+
+.background{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.circle{
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0, 240, 96, 0.15);
+    animation: float 8s infinite ease-in-out;
+}
+
+/* CIRCULO 1 */
+
+.circle:nth-child(1){
+    width: 300px;
+    height: 300px;
+    top: -50px;
+    left: -100px;
+}
+
+/* CIRCULO 2 */
+
+.circle:nth-child(2){
+    width: 200px;
+    height: 200px;
+    bottom: 50px;
+    right: -50px;
+    background: rgba(127, 29, 176, 0.2);
+}
+
+
+
+@keyframes float{
+
+    0%,100%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(30px);
+    }
+}
+
+/* HEADER */
+
+header{
+    text-align: center;
+    padding: 60px 20px 30px;
+}
+
+header h1{
+    font-size: 3rem;
+    color: #00f060;
+    text-shadow: 0 0 20px #00f060;
+}
+
+header p{
+    margin-top: 15px;
+    color: #d9d9d9;
+    font-size: 1.1rem;
+}
+
+/* INFO */
+
+.info{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 40px auto;
+    width: 90%;
+}
+
+/* TARJETAS */
+
+.card{
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 30px;
+    width: 320px;
+    transition: 0.4s;
+    box-shadow: 0 0 15px rgba(0,240,96,0.2);
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px #00f060;
+}
+
+.card h2{
+    color: #00f060;
+    margin-bottom: 15px;
+}
+
+.card p{
+    line-height: 1.8;
+}
+
+/* TEAM */
+
+.team{
+    width: 90%;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.team h2{
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+/* CONTENEDOR */
+
+.team-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+    gap: 25px;
+}
+
+/* INTEGRANTES */
+
+.nombre{
+    background: rgba(127, 29, 176, 0.15);
+    border: 1px solid rgba(255,255,255,0.15);
+    padding: 25px;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.nombre:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #7f1db0;
+}
+
+/* ICONOS */
+
+.icon{
+    width: 80px;
+    height: 80px;
+    margin: auto;
+    border-radius: 50%;
+    background: linear-gradient(135deg,#00f060,#7f1db0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* FOTO */
+
+.salon{
+    width: 90%;
+    margin: 70px auto;
+    text-align: center;
+}
+
+.salon h2{
+    margin-bottom: 25px;
+    font-size: 2.2rem;
+}
+
+.foto{
+    width: 100%;
+    max-width: 850px;
+    height: 450px;
+    margin: auto;
+    border-radius: 25px;
+    overflow: hidden;
+    border: 3px solid #00f060;
+    box-shadow: 0 0 20px rgba(0,240,96,0.4);
+}
+
+/* IMAGEN */
+
+.foto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top: 60px;
+    text-align: center;
+    padding: 25px;
+    background: rgba(0,0,0,0.3);
+    color: #ccc;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    header h1{
+        font-size: 2.2rem;
+    }
+
+    .card{
+        width: 100%;
+    }
+
+    .foto{
+        height: 250px;
+    }
+
+    .team h2{
+        font-size: 2rem;
+    }
+}
